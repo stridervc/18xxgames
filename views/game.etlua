@@ -1,36 +1,26 @@
 <h1><%= game.title %></h1>
+<% if game.subtitle then %>
+<p><%= game.subtitle %></p>
+<% end %>
 <% if game.description then %>
 <p><%= game.description %></p>
 <% end %>
 
+<% if game.basics then %>
 <table>
-<% if type(game.players) == "table" then %>
+<% for title, detail in pairs(game.basics) do %>
 <tr>
-<td><b>Number of players</b></td>
-<td><%=game.players[1]%>&nbsp;to&nbsp;<%=game.players[2]%></td>
-</tr>
+<td><b><%=title%></b></td>
+<% if type(detail) == "string" then %>
+<td><%=detail%></td>
 <% end %>
-<% if type(game.players) == "string" then %>
-<tr>
-<td><b>Number of players</b></td>
-<td><%=game.players%></td>
-</tr>
+<% if type(detail) == "table" and detail.title then %>
+<td><%=detail.title%></td>
 <% end %>
-
-<% if game.playtime then %>
-<tr>
-<td><b>Estimated play time</b></td>
-<td><%=game.playtime%>&nbsp;minutes</td>
-</tr>
-<% end %>
-
-<% if type(game.cap) == "table" then %>
-<tr>
-<td><b>Capitalisation</b></td>
-<td><%=game.cap.title%></td>
 </tr>
 <% end %>
 </table>
+<% end %>
 
 <% if game.bggid then %>
 <p><a href="http://boardgamegeek.com/boardgame/<%=game.bggid%>">On boardgamegeek</a></p>
@@ -39,7 +29,17 @@
 <% if game.section then %>
 <% for title, detail in pairs(game.section) do %>
 <h2><%=title%></h2>
+<% if type(detail) == "string" then %>
 <p><%=detail%></p>
+<% end %>
+<% if type(detail) == "table" then %>
+<p>
+<% for i, line in ipairs(detail) do %>
+<%-line%>
+<% end %>
+</p>
+<% end %>
+
 <% end %>
 <% end %>
 
