@@ -1,18 +1,7 @@
--- http://18xx.info/{title}
+-- http://18xxgames.info/{title}
 
 -- include terminology definitions
 local terms = require("terms")
-
--- template
-Game {
-	--title		= "18Template",	-- this has to be set
-	subtitle	= "Long form description of the game",
-	players		= {2,6},
-	bggid		= 23540,
-	cap			= fullcap,
-	playtime	= 180,		-- minutes
-	url			= "http://example.com",
-}
 
 -- 1830
 Game {
