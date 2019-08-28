@@ -1,1 +1,6 @@
-<p>Hello Lapis!</p>
+<h1>Available games</h1>
+<ul>
+	<% for _, title in ipairs(games) do %>
+		<li><%= title %></li>
+	<% end %>
+</ul>
