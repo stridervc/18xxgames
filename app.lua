@@ -6,16 +6,16 @@ app:enable("etlua")	-- enable html templates
 -- layout template
 app.layout = require "views.layout"
 
-app:get("/", function()
+app:get("/", function(self)
 	-- get list of games in games/
 	self.games = {}
 
-	local function Game(game)
+	function Game(game)
 		if game.title then
 			table.insert(self.games, game.title)
 		end
 	end
-	dofile("games/*.lua")
+	dofile("games.lua")
 
 	return {render = "index"}	-- views/index.etlua
 end)

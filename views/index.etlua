@@ -1,6 +1,6 @@
 <h1>Available games</h1>
 <ul>
 	<% for _, title in ipairs(games) do %>
-		<li><%= title %></li>
+		<li><a href="/<%= title %>"><%= title %></a></li>
 	<% end %>
 </ul>
