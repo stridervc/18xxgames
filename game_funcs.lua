@@ -1,5 +1,18 @@
 -- These functions are used by games to display details
 
+function Term(short)
+	local terms = require("terms")
+
+	if type(short) == "table" then
+		short = short[1]
+	end
+
+	return terms[short].title
+end
+
+-- create a section
+-- content is a table of lines
+-- the first item in the table is the section heading
 function Section(content)
 	local title = content[1]
 
@@ -7,7 +20,7 @@ function Section(content)
 
 	for i, entry in ipairs(content) do
 		if i ~= 1 then
-			html = html .. entry .. "\n"
+			html = html .. entry .. "<br/>\n"
 		end
 	end
 

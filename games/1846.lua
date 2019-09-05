@@ -1,13 +1,11 @@
 -- 1846
-local terms = require("terms")
-
 Game {
 	title		= "1846",
 	subtitle	= "The Race for the Midwest",
 	basics		= {
 		["Number of players"]	= "3 to 5 (2 with rules on BGG)",
 		["Estimated play time"]	= "240 minutes",
-		Capitalisation			= terms["partialcap"],
+		Capitalisation			= Term{"partialcap"},
 	},
 	bggid		= 17405,
 	Section {
