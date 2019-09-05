@@ -14,7 +14,7 @@ Game {
 		Setup	= {
 			"Draw for seating and priority deal",
 			Table {
-				{"", 2, 3, 4, 5, 6},
+				{"Players", 2, 3, 4, 5, 6},
 				{"Bank", 7000, 7000, 7000, 7000, 7000},
 				{"Starting $", 420, 420, 420, 390, 390},
 				{"Cert limit", 25, 19, 14, 12, 11},

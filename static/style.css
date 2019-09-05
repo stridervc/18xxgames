@@ -2,3 +2,19 @@ html * {
 	font-size: 1em;
 }
 
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+table {
+}
+
+th, td {
+	border: 1px solid grey;
+	padding: 2px;
+}
+
+.number {
+	text-align: right;
+}
