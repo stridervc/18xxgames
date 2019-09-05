@@ -1,5 +1,20 @@
 -- These functions are used by games to display details
 
+function Section(content)
+	local title = content[1]
+
+	local html = "<h2>" .. title .. "</h2>\n"
+
+	for i, entry in ipairs(content) do
+		if i ~= 1 then
+			html = html .. entry .. "\n"
+		end
+	end
+
+	return html
+end
+
+-- draw a nice html table from a lua table
 function Table(t)
 	local html = "<table>\n"
 

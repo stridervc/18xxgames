@@ -26,21 +26,9 @@
 <p><a href="http://boardgamegeek.com/boardgame/<%=game.bggid%>">On boardgamegeek</a></p>
 <% end %>
 
-<% if game.section then %>
-<% for title, detail in pairs(game.section) do %>
-<h2><%=title%></h2>
-<% if type(detail) == "string" then %>
-<p><%=detail%></p>
-<% end %>
-<% if type(detail) == "table" then %>
-<p>
-<% for i, line in ipairs(detail) do %>
-<%-line%>
-<% end %>
-</p>
-<% end %>
-
-<% end %>
+<!-- process unnamed stuff, eg Section{} entries --!>
+<% for _, section in ipairs(game) do %>
+<%- section %>
 <% end %>
 
 <p>

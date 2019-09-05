@@ -10,15 +10,14 @@ Game {
 		Capitalisation			= terms["fullcap"],
 	},
 	bggid		= 23540,
-	section		= {
-		Setup	= {
-			"Draw for seating and priority deal",
-			Table {
-				{"Players", 2, 3, 4, 5, 6},
-				{"Bank", 7000, 7000, 7000, 7000, 7000},
-				{"Starting $", 420, 420, 420, 390, 390},
-				{"Cert limit", 25, 19, 14, 12, 11},
-			}
+	Section {
+		"Setup",
+		"Draw for seating and priority deal",
+		Table {
+			{"Players", 2, 3, 4, 5, 6},
+			{"Bank", 7000, 7000, 7000, 7000, 7000},
+			{"Starting $", 420, 420, 420, 390, 390},
+			{"Cert limit", 25, 19, 14, 12, 11},
 		}
 	},
 }
