@@ -16,6 +16,7 @@ app:get("/", function(self)
 			table.insert(self.games, game.title)
 		end
 	end
+	dofile("game_funcs.lua")
 	dofile("games.lua")
 
 	return {render = "index"}	-- views/index.etlua
