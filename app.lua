@@ -30,6 +30,9 @@ app:match("/:game", function(self)
 			self.game = game
 		end
 	end
+
+	dofile("game_funcs.lua")
+
 	dofile("games.lua")
 
 	return {render = "game"}	-- views/game.etlua
