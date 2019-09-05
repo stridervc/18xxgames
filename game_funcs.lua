@@ -1,5 +1,17 @@
 -- These functions are used by games to display details
 
+-- Bullet points, aka unordered list
+function Bullets(items)
+	local html = "<ul>\n"
+	
+	for i, item in ipairs(items) do
+		html = html .. "<li>" .. item .. "</li>\n"
+	end
+
+	html = html .. "</ul>\n"
+	return html
+end
+
 function Term(short)
 	local terms = require("terms")
 
