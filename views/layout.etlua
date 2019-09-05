@@ -4,14 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title><%= page_title or "18xx.info" %></title>
-  <style>
-  html *
-  {
-	font-size: 1em;
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
   <% content_for("inner") %>
 </body>
+
 </html>
