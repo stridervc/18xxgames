@@ -9,7 +9,7 @@ between different 18xx games.
 It should be as simple as possible while being useful.
 It should be browseable from a phone.
 
-Conributing
+Contributing
 ===========
 If you would like to contribute, please fork this code and create
 a pull request. The best way to contribute is to add information
